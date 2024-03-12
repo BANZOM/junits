@@ -4,9 +4,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Duration;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class MiscellaneousTest {
+
+    @BeforeEach
+    public void init() {
+        System.out.println("Initializing test");
+    }
+
     @Test
     public void test1() {
         int[] expected = {1, 2, 3};
