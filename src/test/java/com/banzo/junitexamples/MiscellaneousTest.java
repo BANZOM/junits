@@ -7,8 +7,14 @@ import java.time.Duration;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class MiscellaneousTest {
+
+    MiscellaneousTest() {
+        System.out.println("Constructor");
+    }
 
     @BeforeEach
     public void init() {
