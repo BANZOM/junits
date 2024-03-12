@@ -26,4 +26,13 @@ public class MiscellaneousTest {
             }
         });
     }
+
+    @Test
+    public void test3() {
+        int[] actual = {1, 2, 3};
+
+        assertThrows(Exception.class, () -> {
+            int x = actual[3];
+        });
+    }
 }
