@@ -13,5 +13,8 @@ public class ReverseStringTest {
         assertEquals("a", rs.reverse("a"));
         assertEquals("", rs.reverse(""));
         assertEquals("hello there", rs.reverse("ereht olleh"), "Should return the reverse of the string");
+
+        // with supplier lambda
+        assertEquals("abc", rs.reverse("cba"), () -> "Should return the reverse of the string");
     }
 }
