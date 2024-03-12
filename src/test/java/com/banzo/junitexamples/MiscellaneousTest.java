@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Duration;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -41,5 +42,10 @@ public class MiscellaneousTest {
         assertThrows(Exception.class, () -> {
             int x = actual[3];
         });
+    }
+
+    @AfterEach
+    public void tearDown() {
+        System.out.println("Tearing down test");
     }
 }
